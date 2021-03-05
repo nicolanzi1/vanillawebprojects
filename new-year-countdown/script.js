@@ -6,7 +6,7 @@ const countdown = document.getElementById('countdown')
 const year = document.getElementById('year')
 const loading = document.getElementById('loading')
 
-const currentYear = new Date().getUTCFullYear()
+const currentYear = new Date().getFullYear()
 
 const newYearTime = new Date(`January 01 ${currentYear + 1} 00:00:00`)
 
@@ -26,8 +26,8 @@ function updateCountdown() {
     // Add values to DOM
     days.innerHTML = d
     hours.innerHTML = h < 10 ? '0' + h : h
-    minutes.innerHTML = h < 10 ? '0' + m : m
-    seconds.innerHTML = h < 10 ? '0' + s : s
+    minutes.innerHTML = m < 10 ? '0' + m : m
+    seconds.innerHTML = s < 10 ? '0' + s : s
 }
 
 // Show spinner before countdown
